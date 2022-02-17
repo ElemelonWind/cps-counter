@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">P3L3bYangCindyCPSCounter</string>
+    <string name="gametext">Welcome to CPS Counter!</string>
+    <string name="burst">Burst (3s)</string>
+    <string name="endurance">Endurance (10s)</string>
+    <string name="counter">click to start</string>
+    <string name="restart">click here to restart!</string>
+</resources>

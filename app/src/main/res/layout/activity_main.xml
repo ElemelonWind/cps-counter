@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/activity_main_layout">
+
+    <TextView
+        android:id="@+id/gametext"
+        android:textSize="@dimen/fontsize"
+        android:layout_margin="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gametext"
+        app:layout_constraintBottom_toTopOf="@id/counter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/burst"
+        android:layout_width="@dimen/length"
+        android:layout_height="wrap_content"
+        android:text="@string/burst"
+        android:onClick="start"
+        android:tag="burst"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/endurance"
+        app:layout_constraintTop_toBottomOf="@+id/gametext" />
+
+    <Button
+        android:id="@+id/endurance"
+        android:layout_width="@dimen/length"
+        android:layout_height="wrap_content"
+        android:text="@string/endurance"
+        android:onClick="start"
+        android:tag="endurance"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/burst"
+        app:layout_constraintTop_toBottomOf="@+id/gametext" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/counter"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/width"
+        android:text="@string/counter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="clicked"
+        android:background="@drawable/rounded"
+        android:layout_margin="40dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="fill in mainactivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/counter" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="650"
+        android:min="300"
+        android:layout_margin="15dp"
+        android:progressTint="@color/teal_200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restart"
+        android:onClick="reset"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/size" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
